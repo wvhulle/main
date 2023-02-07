@@ -6,7 +6,7 @@
 // const config = createSvelteKitConfig('main', true);
 // console.log(`The config that will be used:`, config)
 
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from './node_modules/kit/packages/kit/src/exports/vite/index.js';
 import adapter from '@sveltejs/adapter-node';
 
 
@@ -16,7 +16,7 @@ const config = {
 		preprocess: vitePreprocess(),
 
 		kit: {
-			env: { dir: "../" },
+			env: { dir: ".." },
 			alias: {
 				$lib: "../lib"
 			},
